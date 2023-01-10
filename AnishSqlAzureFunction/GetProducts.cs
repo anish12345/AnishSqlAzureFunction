@@ -42,7 +42,8 @@ namespace AnishSqlAzureFunction
                     }
                 }
                 conn.Close();
-                return new OkObjectResult(_productList);
+                //return new OkObjectResult(_productList);
+                return new OkObjectResult(JsonConvert.SerializeObject(_productList));
             }
             catch(Exception ex)
             {
